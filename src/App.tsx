@@ -2,9 +2,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import './App.css'
-
-
-
+import ChatRoom from './pages/ChatRoom'
+import Finestra from './components/Finestra'
 
 function App() {
   
@@ -12,8 +11,10 @@ function App() {
     
       <BrowserRouter>
       <Routes>
-        <Route path='/'/>
-        <Route path='/chatRoom'/>
+        <Route path='/' element={
+          <Finestra><ChatRoom/></Finestra>
+         }/>
+        <Route path='/login'/>
         <Route path='/createStaticID'/>
       </Routes>
       </BrowserRouter>
