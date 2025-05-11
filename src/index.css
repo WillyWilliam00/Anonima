@@ -1,5 +1,87 @@
 @import "tailwindcss";
 
-:root {
-    background-color: black;
+@theme {
+  --color-primario: #00FF41;
+  --color-secondario: #116727;
+  --color-background-primario: hsl(214, 27%, 10%);
+  --color-background-secondario: hsl(214, 19%, 16%);
+  --font-hacker: "Roboto Mono", "monospace";
+  --color-choise-yellow: #facc15;
+  --color-choise-blue: #3b82f6;
+  --color-choise-red: #ef4444;
+  --color-choise-hacker: #22c55e;
+
+}
+
+@layer base {
+ body{ @apply transition-colors font-hacker; }
+}
+
+
+@layer utilities {
+  .yellow-theme {
+    --color-primario: #facc15;
+    --color-secondario: #fde047;
+    --color-background-primario: #fefce8;
+    --color-background-secondario: #fef9c3;
+  }
+
+  .blue-theme {
+    --color-primario: #3b82f6;
+    --color-secondario: #93c5fd;
+    --color-background-primario: #eff6ff;
+    --color-background-secondario: #dbeafe;
+  }
+
+  .red-theme {
+    --color-primario: #ef4444;
+    --color-secondario: #fca5a5;
+    --color-background-primario: #fff1f2;
+    --color-background-secondario: #fee2e2;
+  }
+
+  .hacker-theme {
+    --color-primario: #22c55e;
+    --color-secondario: #4ade80;
+    --color-background-primario: #ecfdf5;
+    --color-background-secondario: #d1fae5;
+  }
+
+  @variant dark {
+    
+    .yellow-theme {
+      --color-choise-yellow: #e9d013;
+      --color-primario: #e9d013;
+      --color-secondario: #eab308;
+      --color-background-primario: #1c1917;
+      --color-background-secondario: #2e2a27;
+    }
+
+    .blue-theme {
+      --color-choise-blue: #60a5fa;
+      --color-primario: #60a5fa;
+      --color-secondario: #1d4ed8;
+      --color-background-primario: #0f172a;
+      --color-background-secondario: #1e3a8a;
+    }
+
+    .red-theme {
+      --color-choise-red: #f87171;
+      --color-primario: #f87171;
+      --color-secondario: #991b1b;
+      --color-background-primario: #1f1717;
+      --color-background-secondario: #7f1d1d;
+    }
+
+  }
+}
+
+@utility ut-button {
+  @apply bg-secondario text-primario border-2 border-primario rounded-lg p-1.5 cursor-pointer;
+  @variant hover {
+    filter: brightness(0.9);
+  }
+  @variant active {
+    @apply outline-1 outline-primario brightness-75;
+  }
 }

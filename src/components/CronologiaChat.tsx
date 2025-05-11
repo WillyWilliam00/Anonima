@@ -1,14 +1,11 @@
-interface Props {
-    children?: React.ReactNode //check cosa far passare se reactNode
-}
+const CronologiaChat = () => {
+  return (
+    <div className="hidden md:block border-2 border-primario bg-background-primario w-1/3">
+      <div className="w-full">
+        <h3 className="text-primario text-md">Cronologia_Chat_Criptate</h3>
+      </div>
+    </div>
+  );
+};
 
-
-const CronologiaChat: React.FC<Props> = ({children}) => {
-    return (
-        <div className="border-r">
-            {children}
-        </div>
-    )
-}
-
-export default CronologiaChat
+export default CronologiaChat;

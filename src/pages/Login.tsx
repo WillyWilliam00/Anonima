@@ -10,7 +10,7 @@ const Login: React.FC<LoginProps> = ({ staticID }) => {
     
     return  (
 
-        <div>
+        <div className="text-red-500 ">
             Questo è il tuo {staticID.staticID}, creato il {data}
         </div>
     )
