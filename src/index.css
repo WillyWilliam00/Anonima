@@ -14,7 +14,13 @@
 }
 
 @layer base {
- body{ @apply transition-colors font-hacker; }
+ body{
+  font-family: var(--font-hacker);
+  
+ }
+  * {
+    @apply transition-colors duration-300;
+  }
 }
 
 
@@ -46,6 +52,24 @@
     --color-background-primario: #ecfdf5;
     --color-background-secondario: #d1fae5;
   }
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    
+   @apply bg-background-secondario rounded-full;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+  
+    @apply bg-primario border-2 border-background-secondario rounded-full; 
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
 
   @variant dark {
     
@@ -73,6 +97,7 @@
       --color-background-secondario: #7f1d1d;
     }
 
+
   }
 }
 
@@ -85,3 +110,4 @@
     @apply outline-1 outline-primario brightness-75;
   }
 }
+

@@ -1,11 +1,12 @@
 import { FaUserSecret } from "react-icons/fa";
 import AnimatePing from "./ui/AnimatePing";
 import { IoIosSend } from "react-icons/io";
+import Message from "./Message";
 
 const Chat = () => {
   return (
-    <div className="flex-1   bg-background-primario border-y-2 border-r-2 border-primario">
-      <div className="flex h-auto  border-b-2 border-primario bg-background-secondario">
+    <div className="flex-1 flex flex-col bg-background-primario border-y-2 border-r-2 border-primario">
+      <div className="flex h-fit  border-b-2 border-primario bg-background-secondario">
         <div className="flex items-center rounded-full p-1 m-2  border-2 border-primario w-fit bg-background-primario">
           <FaUserSecret size={20} className="text-primario m-2" />
         </div>
@@ -17,12 +18,23 @@ const Chat = () => {
           </p>
         </div>
       </div>
-      <div className=" h-[calc(100vh-320px)] overflow-y-scroll">
-        {[...Array(50)].map((index) => (
-          <div key={index}>ciaone</div>
-        ))}
+      <div className=" flex-1  overflow-y-scroll p-4 scrollbar ">
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        <Message from={"meStesso"}/>
+        <Message from={"ospite"}/>
+        
+        
       </div>
-      <div className="flex p-4 items-center justify-between border-t-2 border-primario bg-background-secondario gap-4 ">
+      <div className="flex p-4 items-center h-fit justify-between border-t-2 border-primario bg-background-secondario gap-4 ">
        <div className="flex-1 ">
         <label><input type="text" name="newMessage"  placeholder="TYPE_NEW_MESSAGE..." className="text-primario w-full p-1 rounded border-2 border-primario bg-background-primario" /></label>
        </div>

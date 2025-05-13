@@ -1,31 +1,28 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-
-export type themesName =   "rosso" | "blu" | "giallo" | "hacker"
-const themes: Record<themesName, string | null> = {
-  rosso: "red-theme",
-  blu: "blue-theme",  
-  giallo: "yellow-theme",  
-  hacker: null
- }
+export type ThemeName = "red-theme" | "blue-theme" | "yellow-theme" | "hacker";
 
 export function cn(...inputs: ClassValue[]) {
-
   return twMerge(clsx(inputs));
 }
 
-export function selectTheme(theme: themesName){
+export function selectTheme(theme: ThemeName) {
+  const themes = new Set<string>([
+    "red-theme",
+    "blue-theme",
+    "yellow-theme",
+    "hacker",
+  ]);
 
-  document.documentElement.classList.remove(...Object.values(themes).filter(Boolean) as string[])
-  if(theme === "hacker") {
-    localStorage.removeItem("theme")
-    return
+  document.documentElement.classList.remove(...themes);
+  if (theme === "hacker") {
+    localStorage.removeItem("theme");
+    return;
   }
-  
 
- const selectedTheme = themes[theme] 
- if(selectedTheme){
-  document.documentElement.classList.add(selectedTheme)
-  localStorage.theme = selectedTheme
- }
+  const selectedTheme = themes.has(theme);
+  if (selectedTheme) {
+    document.documentElement.classList.add(theme);
+    localStorage.theme = theme;
+  }
 }
