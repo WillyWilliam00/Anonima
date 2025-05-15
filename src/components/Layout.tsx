@@ -35,12 +35,13 @@ const handleThemeChange = (theme: ThemeName) => {
             </label>
           </div>
         <div>
-          <h1 className="text-primario text-sm sm:text-base lg:text-xl font-semibold">Anonima</h1>
+          <h1 className="text-primario testo-corto text-sm sm:text-base lg:text-xl font-semibold ut-typed-out animate-typing-in-anonima">Anonima</h1>
           
         </div>
+        
         <div className="flex items-center gap-2">
           <AnimatePing size={"md"} />
-          <h1 className="text-primario text-sm sm:text-base lg:text-xl ">Connessione_Sicura</h1>
+          <h1 className="text-primario testo-lungo text-sm sm:text-base lg:text-xl ut-typed-out animate-typing-in ">Connessione_Sicura</h1>
         </div>
       </header>
       <main className="mx-auto md:w-10/12 xl:w-11/12 flex-1 p-4 flex flex-col overflow-hidden ">

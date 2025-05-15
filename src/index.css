@@ -1,4 +1,6 @@
 @import "tailwindcss";
+ 
+
 
 @theme {
   --color-primario: #00FF41;
@@ -11,6 +13,22 @@
   --color-choise-red: #ef4444;
   --color-choise-hacker: #22c55e;
   --color-choise-violet: #8b5cf6;
+  
+  --animate-typing-in-anonima:  typing-in 1.8s steps(8, end) forwards;
+  --animate-typing-in: typing-in 3s steps(26, end) forwards;
+
+
+
+  @keyframes typing-in {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+ 
+  
 }
 
 @layer base {
@@ -27,6 +45,8 @@
 
 
 @layer utilities {
+ 
+
   .violet-theme {
     --color-primario: #8b5cf6;
     --color-secondario: #a78bfa;
@@ -127,4 +147,17 @@
     @apply outline-1 outline-primario brightness-75;
   }
 }
+
+@utility ut-typed-out {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  letter-spacing: 0.1em;
+   @apply border-r border-r-primario 
+
+   
+
+}
+
+
 
