@@ -12,6 +12,7 @@ export function selectTheme(theme: ThemeName) {
     "blue-theme",
     "yellow-theme",
     "hacker",
+    "violet-theme",
   ]);
 
   document.documentElement.classList.remove(...themes);

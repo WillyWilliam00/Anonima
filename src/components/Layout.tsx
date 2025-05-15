@@ -29,6 +29,7 @@ const handleThemeChange = (theme: ThemeName) => {
                 <option value="red-theme" className="text-choise-red ">Rosso</option>
                 <option value="blue-theme" className="text-choise-blue">Blu</option>
                 <option value="yellow-theme" className="text-choise-yellow">Giallo</option>
+                <option value="violet-theme" className="text-choise-violet">Violet</option>
                 <option value="hacker" className="text-choise-hacker">Hacker</option>
               </select>
             </label>

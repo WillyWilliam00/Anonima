@@ -10,7 +10,7 @@
   --color-choise-blue: #3b82f6;
   --color-choise-red: #ef4444;
   --color-choise-hacker: #22c55e;
-
+  --color-choise-violet: #8b5cf6;
 }
 
 @layer base {
@@ -24,7 +24,15 @@
 }
 
 
+
+
 @layer utilities {
+  .violet-theme {
+    --color-primario: #8b5cf6;
+    --color-secondario: #a78bfa;
+    --color-background-primario: #f5f3ff;
+    --color-background-secondario: #e0e7ff;
+  }
   .yellow-theme {
     --color-primario: #facc15;
     --color-secondario: #fde047;
@@ -45,7 +53,7 @@
     --color-background-primario: #fff1f2;
     --color-background-secondario: #fee2e2;
   }
-
+  
   .hacker-theme {
     --color-primario: #22c55e;
     --color-secondario: #4ade80;
@@ -71,7 +79,16 @@
     background: #c0a0b9;
   }
 
+  
+
   @variant dark {
+    .violet-theme {
+      --color-choise-violet: #8b5cf6;
+      --color-primario: #8b5cf6;
+      --color-secondario: #a78bfa;
+      --color-background-primario: #403c92;
+      --color-background-secondario: #201d55;
+    }
     
     .yellow-theme {
       --color-choise-yellow: #e9d013;
